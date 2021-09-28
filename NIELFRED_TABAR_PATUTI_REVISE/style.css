@@ -1,0 +1,172 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+h1{
+    font-family: cursive;
+    font-size: 20px;
+    text-align: center;
+}
+.container2 {
+    background-color: rosybrown;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    border: 2px solid black;
+    overflow: hidden;
+   /* background-image: url('moves/background.png');*/
+    background-size: 100%;
+}
+
+/*Container*/
+#container {
+    border: 5px solid black;
+    top: 50%;
+	left: 50%;
+	display: block;
+	width: 800px;
+    height: 680px;
+    margin-top: -340px;
+    margin-left: -400px;
+	overflow:hidden;
+	position: relative;
+    overflow: hidden;
+	background: url("moves/background.png") no-repeat center;
+	background-size: 800px 680px;
+}
+
+/*Bullets*/
+.bullet {	
+	position: absolute;
+  	background-repeat: no-repeat;
+    background-size: 20px 20px;
+    z-index: 1;
+}
+
+#bullet1 {
+    right: calc(10% + 8%/2 - 8%/2);
+    top: 120px;
+	z-index: 2;
+}
+
+#bullet2 {
+    top: calc(40% + 8%/2 - 2%/2);
+	z-index: 3;
+}
+
+#bullet3 {
+    top: calc(70% + 8%/2 - 2%/2);
+	z-index: 4;
+}
+
+#bullet4 {
+    left: calc(32% + 10%/2 - 2%/2);
+	z-index: 5;
+}
+#bullet5 {
+    left: calc(52% + 10%/2 - 2%/2);
+	z-index: 6;
+}
+#bullet6 {
+    left: calc(70% + 10%/2 - 2%/2);
+	z-index: 7;
+
+}
+#Life{
+    position: relative;
+    top: 5px;
+    border: 3px solid black;
+}
+
+/*Floor*/
+#floor {
+    position: absolute;
+    height: 100%;
+    width: 7%;
+    background-color: transparent;
+    bottom: 0;
+    z-index: 10;
+	float: left;
+	top: 0;
+	left: 0;
+}
+#floor1 {
+    position: absolute;
+    height: 16%;
+    width: 100%;
+    background-color: transparent;
+    bottom: 0;
+    z-index: 11;
+}
+
+/*Player*/
+#player {
+    height: 100px;
+    width: 93px;	
+    position: absolute;
+    bottom: 239px;
+	left: 370px;
+    background: url("moves/idle-1.png");
+    background-size: 63px 70px;
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 8;
+}
+
+
+#area {
+	position: absolute;
+	top: 410px;
+	left: 280px;
+	max-width: 100%;
+	height: 130px;
+	z-index: 9;
+}
+
+#restart {
+    border: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("moves/youdied.jpg") no-repeat center center;
+	background-size: 800px 680px;
+    background-color: black;
+    color: black;
+    top: 40%;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 14;
+}
+
+/*For Jump*/
+.animate{
+    animation: jump 0.2s linear;
+}
+	@keyframes jump{
+    0%{top: 130px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 130px;}
+}
+
+/*Life of the Player*/
+#lifeDisplay {
+	
+    text-align: center;
+    text-decoration: all;
+    font-size: 25px;
+    font-family: sans-serif;
+    background-color:lightgreen;
+	position: absolute;
+  	bottom: 7px;
+  	width: 100%;
+	z-index: 10;
+}

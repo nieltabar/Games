@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <title>Patuti</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="container">
+    <!-- ang gamit sa data buseye is para ma recognize siya sa collision nga java script -->
+    <!-- di pa mogana ang horizontal bullets -->
+  <div id="bullet1" class="bullet" data-bullseye='1'><img src="moves/bullet_h.png" height="20x" width="40px"></div>
+    <div id="bullet2" class="bullet" data-bullseye='2'><img src="moves/bullet_h.png" height="20px" width="40px"></div>
+    <div id="bullet3" class="bullet" data-bullseye='3'><img src="moves/bullet_h.png" height="20px" width="40px"></div>
+	<div id="bullet4" class="bullet" data-bullseye='4'><img src="moves/bullet_v.png" height="40px" width="20px"></div>
+	<div id="bullet5" class="bullet" data-bullseye='5'><img src="moves/bullet_v.png" height="40px" width="20px"></div>
+	<div id="bullet6" class="bullet" data-bullseye='6'><img src="moves/bullet_v.png" height="40px" width="20px"></div>
+	<img id="area" src="moves/area.png">
+    <div id="player"></div>
+
+    <div id="floor"></div>
+	<div id="floor1"></div>
+	  
+    <button id="restart" onclick="sound()"></button>
+
+
+	 
+	 <div id="lifeDisplay">
+      <span id="score"></span>HP &nbsp;<img src="moves/7.jpg" height="25px" width="90px" id="Life">
+      <span></span> | Use WASD to move
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<link rel="stylesheet" type="text/css" href="style2.css">
+  <button class="game-button green" onclick="document.location='play.html'">GO BACK</button>
+  <!-- audios -->
+  <audio preload="metadata" id="Audio2" loop><source src="darksoulsyoudied.mp3" type="audio/mpeg"></audio>
+  <audio preload="metadata" id="Audio" loop><source src="audio.mp3" type="audio/mpeg" control></audio>
+  <button class="game-button green" onclick="sound()">AUDIO ON</button>
+  <button class="game-button green" onclick="audio.pause()">MUTE AUDIO🔇</button>
+
+<div class="container2">
+  <p><h1>PATUTI GAME</h1></p> <br>
+  RULES: DON'T GET HIT OR BE NEAR THE BULLETS
+  USE WASD TO MANUEVER AND MOVE
+
+
+
+
+
+  THIS GAME IS STILL IN WORKING PROGRESS<br>
+  CREDITS:<br>
+  SOUND AUDIO PRODUCE BY TABS<br>
+
+</div>
+
+<script type="text/javascript">
+    var audio = document.getElementById("Audio");
+    function sound(){
+      audio.play();
+    }
+  </script>
+
+
+</body>
+	
+  <script src="jquery.min.js"></script>
+  <script src="collisionDetection.js"></script>
+  <script src="arrowKeysControl.js"></script>
+  <script src="variables.js"></script>
+  <script src="functions.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
